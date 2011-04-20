@@ -16,7 +16,7 @@ public class EmbedlyMessageSource implements MessageSource {
 	public static final String HB_FRAME = "~h~";
 	public static final String JSON_FRAME = "~j~";
 	public static final Pattern FRAME_PATTERN = 
-		Pattern.compile("^"+MSG_FRAME+"(\\d+)"+MSG_FRAME+"((.+|\n)+)");
+		Pattern.compile("^"+MSG_FRAME+"(\\d+)"+MSG_FRAME+"(.+)", Pattern.DOTALL);
 
     private MessageListener listener;
     private boolean running;
