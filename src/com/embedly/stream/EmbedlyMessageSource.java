@@ -76,7 +76,7 @@ public class EmbedlyMessageSource implements MessageSource {
 					try {
 						running = true;
 						if (filterCommand != null) {
-							ws.send(filterCommand);
+							ws.send(encode(filterCommand));
 						}
 						ws.send(encode(subscriptionCommand));
 					} catch(IOException e) {
