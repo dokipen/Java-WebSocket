@@ -17,6 +17,9 @@ public class EmbedlyClient {
 		EmbedlyMessageSource source = new EmbedlyMessageSource();
 		source.setUri(uri);
 		source.setSubscriptionCommand(args[1]);
+		if (args.length > 2) {
+			source.setFilterCommand(args[2]);
+		}
 		source.setMessageListener(new MessageListener() {
 			@Override
 			public void onMessage(String message) {
